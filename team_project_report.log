@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.11)  20 NOV 2022 22:51
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.11)  20 NOV 2022 23:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -259,11 +259,7 @@ File: l3backend-xetex.def 2022-04-14 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count277
 \g__pdf_backend_annotation_int=\count278
 \g__pdf_backend_link_int=\count279
-) (./team_project_report.aux
-
-LaTeX Warning: Label `tab:my-table3' multiply defined.
-
-)
+) (./team_project_report.aux)
 \openout1 = `team_project_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -338,27 +334,64 @@ LaTeX Font Warning: Font shape `TU/cmbr/b/n' undefined
 (Font)              using `TU/cmbr/m/n' instead on input line 58.
 
 
-Overfull \hbox (19.69751pt too wide) in paragraph at lines 90--92
-\TU/cmbr/m/n/10 For point 15, with the assumption in item 8 that $[] \OT1/cmbr/m/n/10 = 2$\TU/cmbr/m/n/10 , we have $\OML/cmbrm/m/it/10 IMCC\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 )) = \OML/cmbrm/m/it/10 ES[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 ))$\TU/cmbr/m/n/10 . 
+Overfull \hbox (14.7375pt too wide) in paragraph at lines 101--103
+\TU/cmbr/m/n/10 For step 15, with the assumption in item 8 that $[] \OT1/cmbr/m/n/10 = 2$\TU/cmbr/m/n/10 , we have $\OML/cmbrm/m/it/10 IMCC\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 )) = \OML/cmbrm/m/it/10 ES[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 ))$\TU/cmbr/m/n/10 . 
  []
 
 [1
 
-] [2] (./team_project_report.aux)
+]
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+ []
+
+
+Overfull \hbox (14.08316pt too wide) in paragraph at lines 125--130
+\TU/cmbr/m/n/10 0.87661738 0.75266046 0.85898488 0.67298805 0.77489399 0.89576837 0.75844785 0.87367226 0.67251673 0.77528057 
+ []
+
+
+Overfull \hbox (14.08316pt too wide) in paragraph at lines 125--130
+\TU/cmbr/m/n/10 0.89058308 0.76389926 0.87221125 0.67468091 0.76801479 0.89863417 0.76314397 0.88878003 0.68128139 0.77080353 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Overfull \hbox (14.08316pt too wide) in paragraph at lines 133--138
+\TU/cmbr/m/n/10 0.86984966 0.78028647 0.97746476 0.78988455 0.96777985 0.85512459 0.77652537 0.96870168 0.79871333 0.97590397 
+ []
+
+
+Overfull \hbox (4.08316pt too wide) in paragraph at lines 133--138
+\TU/cmbr/m/n/10 0.84937897 0.76844785 0.95973839 0.79008419 0.96373025 0.86653073 0.783442 0.96584355 0.79684645 0.98749043 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--138
+
+ []
+
+[2] [3] (./team_project_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 2917 strings out of 476156
- 47252 string characters out of 5814962
- 375064 words of memory out of 5000000
- 23669 multiletter control sequences out of 15000+600000
- 472505 words of font info for 43 fonts, out of 8000000 for 9000
+ 2924 strings out of 476156
+ 47364 string characters out of 5814962
+ 374046 words of memory out of 5000000
+ 23676 multiletter control sequences out of 15000+600000
+ 473651 words of font info for 47 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,18n,62p,553b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on team_project_report.xdv (2 pages, 37804 bytes).
+Output written on team_project_report.xdv (3 pages, 61844 bytes).

@@ -1,10 +1,10 @@
 # Fdb version 3
-["xdvipdfmx"] 1669002681 "team_project_report.xdv" "team_project_report.pdf" "team_project_report" 1669002681
-  "team_project_report.xdv" 1669002681 37804 3fab70374965e9db425ac36244858949 "xelatex"
+["xdvipdfmx"] 1669004997 "team_project_report.xdv" "team_project_report.pdf" "team_project_report" 1669004997
+  "team_project_report.xdv" 1669004997 61844 ad01870a577ad9a544912768294a3ae1 "xelatex"
   (generated)
   "team_project_report.pdf"
-["xelatex"] 1669002681 "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" "team_project_report.xdv" "team_project_report" 1669002681
-  "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" 1669002681 6943 1ec62a6c6c297b88f2f6804e69bddb12 ""
+["xelatex"] 1669004997 "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" "team_project_report.xdv" "team_project_report" 1669004997
+  "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" 1669004997 10328 1caf7e95dd403bd8bf14174ce788edb8 ""
   "/usr/local/share/texmf/fonts/tfm/public/cmbright/cmbr10.tfm" 1668967403 1304 95ad082f6791446dc43df559d5c79878 ""
   "/usr/local/share/texmf/fonts/tfm/public/cmbright/cmbr8.tfm" 1668967403 1304 6f575d26e34fea6311d7ae3e9a5bf8d0 ""
   "/usr/local/share/texmf/fonts/tfm/public/cmbright/cmbrmi10.tfm" 1668967403 1544 20b33e3c0f9b0012adb04ac9d418afaa ""
@@ -20,6 +20,7 @@
   "/usr/local/share/texmf/tex/latex/pict2e/pict2e.sty" 1669001854 30933 ccdcd551eb516817cc8f41862254e6e7 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1650183167 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texmf-dist/tex/generic/iftex/iftex.sty" 1650183167 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty" 1650183167 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1650183167 2222 da905dc1db75412efd2d8f67739f0596 ""
@@ -45,8 +46,8 @@
   "/usr/share/texmf-dist/tex/latex/tools/calc.sty" 1650183167 10214 00ce62e730d0cfe22b35e8f1c84949c7 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1668183105 5825174 62df1a0264fd614b42cdbb4db0d00ac3 ""
-  "team_project_report.aux" 1669002681 159 f0ae5f673c0df52b50f9bff144b1e06e "xelatex"
-  "team_project_report.tex" 1669002681 6943 1ec62a6c6c297b88f2f6804e69bddb12 ""
+  "team_project_report.aux" 1669004997 219 82e6d09cf5c09b84aa8775e44492c7aa "xelatex"
+  "team_project_report.tex" 1669004997 10328 1caf7e95dd403bd8bf14174ce788edb8 ""
   (generated)
   "team_project_report.aux"
   "team_project_report.log"

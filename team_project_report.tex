@@ -55,15 +55,15 @@
         Team Members: & \theauthor\\
 \end{tabular}
 \end{center}
-\section*{Executive Summary}
+\section*{\underline{Executive Summary}}
 We started our project research with a meeting discussing the targets of our research, problems that we would face, as well as the steps that we need to take. 
 
 After figuring out all the questions that we had and having a general idea about how to carry out our research, We divided the research into 4 parts. Che Wang is responsible for question 4-5, 14-15 of the research. Huaze Liao is responsible for question 6-7, 12-13. Yuqing Liu is responsible for question 8-11. Xizhi Wang is responsible for 16-17, and he also contributed a lot to helping our members. 
 
 After finishing writing our python code, we had another meeting to review each other's code and put them together to form our final solution. 
-\section*{Methodology}
-\subsection*{Point 4-5}
-For point 4, we wrote a function to simulate $\tilde {X_1}(i,j)$ and $\tilde {X_2}(i,j)$ and loop this function 100,000 times to generate 100,000 simulations. 
+\section*{\underline{Methodology}}
+\subsection*{Step 4-5}
+For step 4, we wrote a function to simulate $\tilde {X_1}(i,j)$ and $\tilde {X_2}(i,j)$ and loop this function 100,000 times to generate 100,000 simulations. 
 Within this function, we first generate a $Z$ matrix, the shape of which is 5 times 5, and each element of the matrix is the same number sampled from the standard normal distribution. Then we generate a $Z(i,j)$ matrix, which also has the shape of 5 times 5, and each element of the matrix is a different sample from the standard normal distribution. After that we use the following formula to simulate $\tilde {X_1}(i,j)$, $\tilde {X_2}(i,j)$ and $\tilde X$.
 \begin{equation}
   \begin{aligned}
@@ -80,26 +80,99 @@ ES_{\alpha}(F_n^e) = \frac {1} {n(1-\alpha)} \sum ^n_{k=\lceil n\alpha \rceil + 
 \notag
 $$
 
-\noindent For point 5, we follow the instructions and set $\epsilon = 0.005$, with $\tilde {X_n} \in (VaR_{0.99} - \epsilon, VaR_{0.99} + \epsilon)$, take average of $\tilde {X_1}$ and $\tilde {X_2}$ to find the Euler allocations of
+\noindent For step 5, we follow the instructions and set $\epsilon = 0.005$, with $\tilde {X_n} \in (VaR_{0.99} - \epsilon, VaR_{0.99} + \epsilon)$, take average of $\tilde {X_1}$ and $\tilde {X_2}$ to find the Euler allocations of
 VaR0.99 for the risk position 1 and 2.
 With $\tilde {X} \leq VaR_{0.975}$,  take average of $\tilde {X_1}$ and $\tilde {X_2}$ for these simulations to find the Euler allocations of $ES_{0.975}$ for the risk position 1 and 2.
-\subsection*{Point 6-7}
-\subsection*{Point 8-11}
-\subsection*{Point 12-13}
-\subsection*{Point 14-15}
-For point 14, we calculated the $ES^{F,C}(X_n(6,j)|X(6))$ using the same method as point 13.
-\\For point 15, with the assumption in item 8 that $\frac {ES^{R,S}(X(i))} {ES^{R,C}(X(i))} = 2$, we have $IMCC(X_n(i,j)|X(i))=ES^{F,C}(X_n(i,j)|X(i))$.
-\subsection*{Point 16-17}
-\section*{Result}
+\subsection*{Step 6-7}
+Step 6:\\
+From step 4 we get the simulated loss for risk position 1, 2. Then we use the function “calc\_LH\_adjed\_loss” to transform these simulated loss matrices to horizon adjusted loss for risk position 1, 2. Sum them up, and we will have the liquidity horizon adjusted loss for the portfolio.
+\\Step 7:\\
+Obtain FRTB expected shortfall attributed to each RF by calculating quadratic mean of expected shortfall of horizon adjusted loss of 5 LH.
 
-\subsection*{Point 4-5}
-For point 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 5.26 and the $ES_{0.975}$ for the 10 days loss of the portfolio is around: 5.27.
-\\For point 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 3.174, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 2.088. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 3.435, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 1.836.
-\subsection*{Point 6-7}
-\subsection*{Point 8-11}
-\subsection*{Point 12-13}
-\subsection*{Point 14-15}
-For point 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
+\subsection*{Step 8-11}
+\subsection*{Step 12-13}
+Step 12:\\
+To execute the algorithm of Euler allocation of loss for risk position 1, 2, we first find the index where loss is greater than VaR by boolean index. Then match this boolean index to loss for risk position 1, 2 and take the mean.
+\\Step 13:\\
+Apply the Bayes formula to calculate Euler allocation of FRTB ES.
+Use the sum back methodology and get exactly the expected shortfall attributed to each RF, which verifies our calculation.
+
+\subsection*{Step 14-15}
+For step 14, we calculated the $ES^{F,C}(X_n(6,j)|X(6))$ using the same method as step 13.
+\\For step 15, with the assumption in item 8 that $\frac {ES^{R,S}(X(i))} {ES^{R,C}(X(i))} = 2$, we have $IMCC(X_n(i,j)|X(i))=ES^{F,C}(X_n(i,j)|X(i))$.
+\subsection*{Step 16-17}
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+\section*{\underline{Result}}
+
+\subsection*{Step 4-5}
+For step 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 5.26 and the $ES_{0.975}$ for the 10 days loss of the portfolio is around: 5.27.
+\\For step 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 3.174, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 2.088. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 3.435, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 1.836.
+\subsection*{Step 6-7}
+The result is:\\
+3.72881018, 3.72986028, 3.71772254, 3.73985184, 3.73454308, with respect to 5 RF.
+
+\subsection*{Step 8-11}
+\subsection*{Step 12-13}
+Step 12:\\
+For Euler allocation of loss for risk position 1:\\
+\hrule \vspace{5pt}
+\noindent 0.87661738 0.75266046 0.85898488 0.67298805 0.77489399  
+ 0.89576837 0.75844785 0.87367226 0.67251673 0.77528057 \\
+ 0.89058308 0.76389926 0.87221125 0.67468091 0.76801479 
+ 0.89863417 0.76314397 0.88878003 0.68128139 0.77080353 \\
+ 0.90480572 0.77407009 0.89567256 0.68278681 0.77533642\\
+\hrule \vspace{5pt}
+\noindent For Euler allocation of loss for risk position 2:\\
+\hrule \vspace{5pt}
+\noindent 0.86984966 0.78028647 0.97746476 0.78988455 0.96777985  
+ 0.85512459 0.77652537 0.96870168 0.79871333 0.97590397 \\
+ 0.84937897 0.76844785 0.95973839 0.79008419 0.96373025 
+ 0.86653073 0.783442   0.96584355 0.79684645 0.98749043 \\
+ 0.85282197 0.76235874 0.94281946 0.77669267 0.96826207 \\
+\hrule \vspace{5pt}
+\vspace{15pt}
+\noindent Step 13:\\
+For Euler allocation of FRTB ES for risk position 1
+\begin{table}[H]
+  \label{tab:my-tab1}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
+1&0.40991228&0.30892015&0.42236161&0.26359309&0.36155884 \\
+2&0.41846398&0.31062011&0.42946743&0.26399052&0.36223981 \\
+3&0.41598834&0.31423898&0.42894521&0.26529725&0.35704286 \\
+4&0.42059084&0.31294809&0.43706108&0.26701192&0.35935756 \\
+5&0.42502687&0.31785313&0.44009323&0.2663285 &0.36130169 \\
+ \end{tabular}%
+  }
+  \end{table}
+
+
+\noindent For Euler allocation of FRTB ES for risk position 2
+\begin{table}[H]
+  \label{tab:my-tab2}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
+1&0.40674764&0.3202589 &0.480618  &0.30937861&0.45155771 \\
+2&0.39947698&0.31802371&0.47618065&0.31352788&0.4559785  \\
+3&0.39674204&0.31611009&0.47199022&0.31067599&0.44802913 \\
+4&0.40556535&0.32127185&0.47495737&0.31230488&0.46037951 \\
+5&0.40060782&0.31304414&0.4632591 &0.30295751&0.45120378 \\
+  \end{tabular}%
+  }
+  \end{table}
+
+\subsection*{Step 14-15}
+For step 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
 \begin{table}[H]
   \label{tab:my-table}
   \resizebox{\columnwidth}{!}{%
@@ -121,7 +194,7 @@ For point 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
   \end{tabular}%
   }
   \end{table}
-\noindent For point 15:\\
+\noindent For step 15:\\
 \noindent $IMCC(X_1(i,j)|X(i))$ is:
 \begin{table}[H]
   \label{tab:my-table3}
@@ -141,7 +214,7 @@ For point 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
 
 \noindent $IMCC(X_2(i,j)|X(i))$ is:
 \begin{table}[H]
-  \label{tab:my-table3}
+  \label{tab:my-table4}
   \resizebox{\columnwidth}{!}{%
   \begin{tabular}{llllll}
   \hline
@@ -155,6 +228,6 @@ For point 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
   \end{tabular}%
   }
   \end{table}
-\subsection*{Point 16-17}
+\subsection*{Step 16-17}
 
 \end{document}

@@ -293,5 +293,9 @@ INPUT /usr/local/share/texmf/fonts/tfm/public/cmbright/cmbrsy8.tfm
 INPUT /usr/local/share/texmf/fonts/tfm/public/cmbright/cmbrsy8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/share/texmf/fonts/tfm/public/cmbright/cmbr10.tfm
+INPUT /usr/local/share/texmf/fonts/tfm/public/cmbright/cmbrmi10.tfm
+INPUT /usr/local/share/texmf/fonts/tfm/public/cmbright/cmbrsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 OUTPUT team_project_report.xdv
 INPUT team_project_report.aux
