@@ -1,0 +1,160 @@
+\documentclass{article}
+% \renewcommand{\familydefault}{\sfdefault}
+% \usepackage{fontspec}
+% \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+% \setmainfont{Arial}
+% \setlength{\headheight}{12.5pt}
+% \usepackage[utf8]{inputenc}
+\usepackage{cmbright}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{diagbox}
+ \geometry{
+ a4paper,
+ total={170mm,270mm},
+ left=20mm,
+ top=10mm,
+ }
+ \usepackage{graphicx}
+ \usepackage{titling}
+
+ \title{MF731 Team Project Report
+}
+\author{Che Wang, Liao Huaze, Liu Yuqing, Xizhi Wang}
+\date{November 2022}
+ 
+%  \usepackage{fancyhdr}
+% \fancypagestyle{plain}{%  the preset of fancyhdr 
+%     \fancyhf{} % clear all header and footer fields
+%     \fancyhead[L]{Description of Assignment}
+% }
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1em%
+    % {\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1em}
+\makeatother
+% -------------------------------------------------------
+% -------------------------------------------------------
+% -------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\noindent\begin{tabular}{@{}ll}
+        Team Members: & \theauthor\\
+\end{tabular}
+\end{center}
+\section*{Executive Summary}
+We started our project research with a meeting discussing the targets of our research, problems that we would face, as well as the steps that we need to take. 
+
+After figuring out all the questions that we had and having a general idea about how to carry out our research, We divided the research into 4 parts. Che Wang is responsible for question 4-5, 14-15 of the research. Huaze Liao is responsible for question 6-7, 12-13. Yuqing Liu is responsible for question 8-11. Xizhi Wang is responsible for 16-17, and he also contributed a lot to helping our members. 
+
+After finishing writing our python code, we had another meeting to review each other's code and put them together to form our final solution. 
+\section*{Methodology}
+\subsection*{Point 4-5}
+For point 4, we wrote a function to simulate $\tilde {X_1}(i,j)$ and $\tilde {X_2}(i,j)$ and loop this function 100,000 times to generate 100,000 simulations. 
+Within this function, we first generate a $Z$ matrix, the shape of which is 5 times 5, and each element of the matrix is the same number sampled from the standard normal distribution. Then we generate a $Z(i,j)$ matrix, which also has the shape of 5 times 5, and each element of the matrix is a different sample from the standard normal distribution. After that we use the following formula to simulate $\tilde {X_1}(i,j)$, $\tilde {X_2}(i,j)$ and $\tilde X$.
+\begin{equation}
+  \begin{aligned}
+\tilde {X_1}(i,j) = 0.3Z + \sqrt{1-0.3^2} Z(i,j), \quad\tilde {X_1}(i,j) \sim N (0.004,0.04)\\
+\tilde {X_2}(i,j) = 0.1Z + \sqrt{1-0.1^2} Z(i,j), \quad\tilde {X_2}(i,j) \sim N (0.006,0.05)\\
+\notag
+  \end{aligned}
+\end{equation}
+Then we wrote two functions to calculate the VaR and ES.
+VaR, ES is calculated with the formulas:
+$$
+VaR_\alpha = l_{(\lceil n\alpha \rceil)}, \quad
+ES_{\alpha}(F_n^e) = \frac {1} {n(1-\alpha)} \sum ^n_{k=\lceil n\alpha \rceil + 1} l_{(k)} + \frac {\lceil n\alpha \rceil - n\alpha} {n(1-\alpha)} l_{(\lceil n\alpha \rceil)}
+\notag
+$$
+
+\noindent For point 5, we follow the instructions and set $\epsilon = 0.005$, with $\tilde {X_n} \in (VaR_{0.99} - \epsilon, VaR_{0.99} + \epsilon)$, take average of $\tilde {X_1}$ and $\tilde {X_2}$ to find the Euler allocations of
+VaR0.99 for the risk position 1 and 2.
+With $\tilde {X} \leq VaR_{0.975}$,  take average of $\tilde {X_1}$ and $\tilde {X_2}$ for these simulations to find the Euler allocations of $ES_{0.975}$ for the risk position 1 and 2.
+\subsection*{Point 6-7}
+\subsection*{Point 8-11}
+\subsection*{Point 12-13}
+\subsection*{Point 14-15}
+For point 14, we calculated the $ES^{F,C}(X_n(6,j)|X(6))$ using the same method as point 13.
+\\For point 15, with the assumption in item 8 that $\frac {ES^{R,S}(X(i))} {ES^{R,C}(X(i))} = 2$, we have $IMCC(X_n(i,j)|X(i))=ES^{F,C}(X_n(i,j)|X(i))$.
+\subsection*{Point 16-17}
+\section*{Result}
+
+\subsection*{Point 4-5}
+For point 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 5.26 and the $ES_{0.975}$ for the 10 days loss of the portfolio is around: 5.27.
+\\For point 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 3.174, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 2.088. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 3.435, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 1.836.
+\subsection*{Point 6-7}
+\subsection*{Point 8-11}
+\subsection*{Point 12-13}
+\subsection*{Point 14-15}
+For point 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
+\begin{table}[H]
+  \label{tab:my-table}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  j                         & 1          & 2          & 3         & 4          & 5          \\ \hline
+  $ES^{F,C}(X_1(6,j)|X(6))$ & 1.75743797 & 1.20043151 & 1.4947551 & 0.79798473 & 0.89325796 \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+\noindent$ES^{F,C}(X_2(6,j)|X(6))$ is:
+\begin{table}[H]
+  \label{tab:my-table2}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  j                         & 1          & 2          & 3         & 4          & 5          \\ \hline
+  $ES^{F,C}(X_1(6,j)|X(6))$ & 0.93965622 & 0.70802632 & 1.00024164& 0.6183377  & 0.89227294 \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+\noindent For point 15:\\
+\noindent $IMCC(X_1(i,j)|X(i))$ is:
+\begin{table}[H]
+  \label{tab:my-table3}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
+  1&0.41115926&0.31388585&0.43034273&0.26614056&0.35988107 \\ 
+  2&0.41681235&0.30762569&0.42334948&0.2582787 &0.35317547 \\ 
+  3&0.41331437&0.30808245&0.4282395 &0.2622814 &0.3617308  \\ 
+  4&0.41561675&0.30987268&0.43425611&0.26626251&0.36629749 \\ 
+  5&0.43032133&0.31602653&0.43956077&0.26155237&0.35826667 \\ 
+  6&1.75743797&1.20043151&1.4947551 &0.79798473&0.89325796 \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+
+\noindent $IMCC(X_2(i,j)|X(i))$ is:
+\begin{table}[H]
+  \label{tab:my-table3}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
+  1&0.40297301&0.31898195&0.46850977&0.30554344&0.45115918 \\
+  2&0.40679785&0.32162876&0.47768414&0.30900191&0.45527033 \\
+  3&0.40467146&0.31101453&0.46934114&0.30973559&0.44907883 \\
+  4&0.40330508&0.32178986&0.46947583&0.30531772&0.44742337 \\
+  5&0.40387888&0.31597148&0.45994035&0.30576853&0.44302283 \\
+  6&0.93965622&0.70802632&1.00024164&0.6183377 &0.89227294 \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+\subsection*{Point 16-17}
+
+\end{document}
