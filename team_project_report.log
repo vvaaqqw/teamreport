@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.11)  20 NOV 2022 23:41
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.11)  22 NOV 2022 13:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -333,14 +333,14 @@ File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 LaTeX Font Warning: Font shape `TU/cmbr/b/n' undefined
 (Font)              using `TU/cmbr/m/n' instead on input line 58.
 
+[1
 
+]
 Overfull \hbox (14.7375pt too wide) in paragraph at lines 101--103
 \TU/cmbr/m/n/10 For step 15, with the assumption in item 8 that $[] \OT1/cmbr/m/n/10 = 2$\TU/cmbr/m/n/10 , we have $\OML/cmbrm/m/it/10 IMCC\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 )) = \OML/cmbrm/m/it/10 ES[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 ))$\TU/cmbr/m/n/10 . 
  []
 
-[1
 
-]
 Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
@@ -388,10 +388,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  2924 strings out of 476156
  47364 string characters out of 5814962
- 374046 words of memory out of 5000000
+ 373046 words of memory out of 5000000
  23676 multiletter control sequences out of 15000+600000
  473651 words of font info for 47 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,18n,62p,553b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,18n,62p,575b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on team_project_report.xdv (3 pages, 61856 bytes).
+Output written on team_project_report.xdv (3 pages, 62424 bytes).

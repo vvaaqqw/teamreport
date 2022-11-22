@@ -58,21 +58,21 @@
 \section*{\underline{Executive Summary}}
 We started our project research with a meeting discussing the targets of our research, problems that we would face, as well as the steps that we need to take. 
 
-After figuring out all the questions that we had and having a general idea about how to carry out our research, We divided the research into 4 parts. Che Wang is responsible for question 4-5, 14-15 of the research. Huaze Liao is responsible for question 6-7, 12-13. Yuqing Liu is responsible for question 8-11. Xizhi Wang is responsible for 16-17, and he also contributed a lot to helping our members. 
+After figuring out all the questions that we had and having a general idea about how to carry out our research, We divided the research into 4 parts. Che Wang is responsible for question 4-5, 14-15 of the research. Huaze Liao is responsible for question 6-7, 12-13. Yuqing Liu is responsible for question 8-11. Xizhi Wang is responsible for 16-17, and he also contributed a lot to helping other members. 
 
 After finishing writing our python code, we had another meeting to review each other's code and put them together to form our final solution. 
 \section*{\underline{Methodology}}
 \subsection*{Step 4-5}
-For step 4, we wrote a function to simulate $\tilde {X_1}(i,j)$ and $\tilde {X_2}(i,j)$ and loop this function 100,000 times to generate 100,000 simulations. 
-Within this function, we first generate a $Z$ matrix, the shape of which is 5 times 5, and each element of the matrix is the same number sampled from the standard normal distribution. Then we generate a $Z(i,j)$ matrix, which also has the shape of 5 times 5, and each element of the matrix is a different sample from the standard normal distribution. After that we use the following formula to simulate $\tilde {X_1}(i,j)$, $\tilde {X_2}(i,j)$ and $\tilde X$.
+For step 4, we wrote a function to simulate $\tilde {X_1}(i,j)$ and $\tilde {X_2}(i,j)$ and loop this function 1,000,000 times to generate 100,000 simulations. 
+Within this function, we first generate a $Z$ matrix, the shape of which is 5 times 5, and each element of the matrix is the same number sampled from the standard normal distribution. Then we generate a $Z(i,j)$ matrix, which also has the shape of 5 times 5, and each element of the matrix is a different sample from the standard normal distribution. After that we use the following formula to simulate $\tilde {X_1}(i,j)$. Then use the same method to simulate $\tilde {X_2}(i,j)$.
 \begin{equation}
   \begin{aligned}
-\tilde {X_1}(i,j) = 0.3Z + \sqrt{1-0.3^2} Z(i,j), \quad\tilde {X_1}(i,j) \sim N (0.004,0.04)\\
-\tilde {X_2}(i,j) = 0.1Z + \sqrt{1-0.1^2} Z(i,j), \quad\tilde {X_2}(i,j) \sim N (0.006,0.05)\\
+\frac {\tilde {X_1}(i,j)-0.004} {\sqrt{0.04}} = \sqrt{0.3}Z+\sqrt{0.7}Z(i,j) , \quad\tilde {X_1}(i,j) \sim N (0.004,0.04)\\
+\frac {\tilde {X_2}(i,j)-0.006} {\sqrt{0.05}} = \sqrt{0.1}Z+\sqrt{0.9}Z(i,j) , \quad\tilde {X_2}(i,j) \sim N (0.006,0.05)\\
 \notag
   \end{aligned}
 \end{equation}
-Then we wrote two functions to calculate the VaR and ES.
+We wrote two functions to calculate the VaR and ES.
 VaR, ES is calculated with the formulas:
 $$
 VaR_\alpha = l_{(\lceil n\alpha \rceil)}, \quad
@@ -111,8 +111,8 @@ For step 14, we calculated the $ES^{F,C}(X_n(6,j)|X(6))$ using the same method a
 \section*{\underline{Result}}
 
 \subsection*{Step 4-5}
-For step 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 5.26 and the $ES_{0.975}$ for the 10 days loss of the portfolio is around: 5.27.
-\\For step 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 3.174, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 2.088. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 3.435, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 1.836.
+For step 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 7.44 and the $ES_{0.975}$ for the 10 days loss of the portfolio is also around: 7.43.
+\\For step 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 6.61, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 1.82. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 3.435, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 1.836.
 \subsection*{Step 6-7}
 The result is:\\
 3.72881018, 3.72986028, 3.71772254, 3.73985184, 3.73454308, with respect to 5 RF.
