@@ -67,8 +67,8 @@ For step 4, we wrote a function to simulate $\tilde {X_1}(i,j)$ and $\tilde {X_2
 Within this function, we first generate a $Z$ matrix, the shape of which is 5 times 5, and each element of the matrix is the same number sampled from the standard normal distribution. Then we generate a $Z(i,j)$ matrix, which also has the shape of 5 times 5, and each element of the matrix is a different sample from the standard normal distribution. After that we use the following formula to simulate $\tilde {X_1}(i,j)$. Then use the same method to simulate $\tilde {X_2}(i,j)$.
 \begin{equation}
   \begin{aligned}
-\frac {\tilde {X_1}(i,j)-0.004} {\sqrt{0.04}} = \sqrt{0.3}Z+\sqrt{0.7}Z(i,j) , \quad\tilde {X_1}(i,j) \sim N (0.004,0.04)\\
-\frac {\tilde {X_2}(i,j)-0.006} {\sqrt{0.05}} = \sqrt{0.1}Z+\sqrt{0.9}Z(i,j) , \quad\tilde {X_2}(i,j) \sim N (0.006,0.05)\\
+\frac {\tilde {X_1}(i,j)-0.004} {0.04} = \sqrt{0.3}Z+\sqrt{0.7}Z(i,j) , \quad\tilde {X_1}(i,j) \sim N (0.004,0.04)\\
+\frac {\tilde {X_2}(i,j)-0.006} {0.05} = \sqrt{0.1}Z+\sqrt{0.9}Z(i,j) , \quad\tilde {X_2}(i,j) \sim N (0.006,0.05)\\
 \notag
   \end{aligned}
 \end{equation}
