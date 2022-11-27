@@ -90,6 +90,29 @@ From step 4 we get the simulated loss for risk position 1, 2. Then we use the fu
 Obtain FRTB expected shortfall attributed to each RF by calculating quadratic mean of expected shortfall of horizon adjusted loss of 5 LH.
 
 \subsection*{Step 8-11}
+Step 8:\\
+we defined the FRTB ES capital charge for RFi as $IMCC(X(i)) = \frac {ES^{R,S}(X(i))} {ES^{R,C}(X (i))} ES^{F,C}(X(i))$, with $1 \leq i \leq 5$. In this case we assume that $\frac{ES^{R,S}(X(i))} {ES^{R,C}(X(i))} = 2$ for all $1 \leq i \leq 5$, and also we use the $ES(X(i))$ in task 7 as $ES^{F,C}(X(i))$.
+
+\noindent Step 9:\\
+we constructed the unconstrained portfolio with each liquidity horizon for risk position 1 and risk position 2 respectively by 
+$$
+X_n(6,j)=\sum^5_{i=1}X_n(i,j),\quad 1 \leq j \leq 5
+$$
+\noindent for n equals to 1 and 2.\\ 
+\noindent Then, we defined the unconstrained portfolio for the portfolio by summing the unconstrained portfolio for risk position 1 and risk position 2 for each liquidity horizon. 
+$$
+X(6,j) = X_1(6,j) + X_2(6,j)
+$$
+\noindent And The FRTB ES capital charge for X(6) is calculated by the same way in task 8 by:
+$$
+IMCC(X(i)) = \frac{ES^{R,S}(X(i))} {ES^{R,C}(X (i))} ES^{F,C}(X(i))
+$$
+\noindent for i =6 \\
+\noindent Step 10:
+\noindent For the portfolio loss X, we defined the aggregate capital charge for modellable risk factors by:
+$$
+IMCC(X) = 0.5 IMCC(x(6)) + 0.5 \sum^5_{i=1} IMCC(X(i))
+$$
 \subsection*{Step 12-13}
 Step 12:\\
 To execute the algorithm of Euler allocation of loss for risk position 1, 2, we first find the index where loss is greater than VaR by boolean index. Then match this boolean index to loss for risk position 1, 2 and take the mean.
@@ -101,6 +124,7 @@ Use the sum back methodology and get exactly the expected shortfall attributed t
 For step 14, we calculated the $ES^{F,C}(X_n(6,j)|X(6))$ using the same method as step 13.
 \\For step 15, with the assumption in item 8 that $\frac {ES^{R,S}(X(i))} {ES^{R,C}(X(i))} = 2$, we have $IMCC(X_n(i,j)|X(i))=ES^{F,C}(X_n(i,j)|X(i))$.
 \subsection*{Step 16-17}
+Set two loops i from 1 to 6, k from 1 to 5. Calculated the sum of k's $IMCC(\tilde X(i,k)|X_n(i,j))$ (16) to get the Euler allocation of IMCC. Since in python, we let k start from 0, so we have 1/(5-(j+1)+1) and j in range (1,k+1). 
 %-----------------------------------------------
 %-----------------------------------------------
 %-----------------------------------------------
@@ -111,30 +135,47 @@ For step 14, we calculated the $ES^{F,C}(X_n(6,j)|X(6))$ using the same method a
 \section*{\underline{Result}}
 
 \subsection*{Step 4-5}
-For step 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 8.453 and the $ES_{0.975}$ for the 10 days loss of the portfolio is also around: 8.494.
-\\For step 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 5.393, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 3.060. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 5.549, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 2.944.
+For step 4, we found that the $VaR_{0.99}$ for the 10 days loss of the portfolio is around: 1.958 and the $ES_{0.975}$ for the 10 days loss of the portfolio is also around: 1.968.
+\\For step 5, the Euler allocation of $VaR_{0.99}$ for the risk position 1 is around: 1.102, and the Euler allocation of $VaR_{0.99}$ for the risk position 2 is around: 0.855. The Euler allocation of $ES_{0.975}$ for the risk position 1 is around: 1.141, and the Euler allocation of $ES_{0.975}$ for the risk position 2 is around: 0.827.
 \subsection*{Step 6-7}
 The result is:\\
-4.18176039, 4.17235274, 4.17781365, 4.1792819 , 4.1719343, with respect to 5 RF.
+0.95221332, 0.95054998, 0.95205721, 0.95254039, 0.95144739 with respect to 5 RF.
 
 \subsection*{Step 8-11}
+For task 8, we found that the FRTB ES capital charge for each factor i in RF are:
+
+\noindent for i = 1, IMCC(X(1))= 1.9044266316512475\\
+for i = 2, IMCC(X(2))  = 1.9010999601957776\\
+for i = 3, IMCC(X(3))  = 1.9041144158790906\\
+for i = 4, IMCC(X(4))  = 1.9050807752747572\\
+for i = 5, IMCC(X(5))  = 1.9028947797673028\\
+
+\noindent For task 9, we constructed the unconstrained portfolio for risk position 1, risk position 2, and the portfolio. Then, we found the FRTB ES capital charge for unconstrained portfolio for the portfolio($IMCC(X(6))$) is:
+7.042635255965385
+With the expected shortfall for each factor in liquidity horizons:
+[1.96811812, 1.60070078, 1.74400856, 1.22164945, 1.19580629],
+
+\noindent For task 10, For the portfolio loss X, its aggregate capital charge for modellable risk factors is
+8.280125909366781.
+
+
 \subsection*{Step 12-13}
 Step 12:\\
 The Euler allocation of loss for risk position 1:\\
 \hrule \vspace{5pt}
-\noindent 1.18103958 0.96353202 1.05996218 0.7538256  0.77347191
- 1.17493484 0.96033671 1.05377384 0.75212518\\ 0.77057598
- 1.18154701 0.96623101 1.05867053 0.75381605 0.77834807
- 1.17346491 0.96071965\\ 1.05886644 0.75431594 0.77169213
- 1.17862809 0.96191309 1.05938733 0.75682338 0.77453018 \\
+\noindent 0.2395761  0.19575744 0.21324066 0.15107842 0.15275208
+0.23897585 0.19498911 0.21316079 0.1520811\\  0.15323127
+0.23983391 0.19533927 0.2135622  0.15187831 0.15322169
+0.23901384 0.19376588\\ 0.21300172 0.15104745 0.15318629
+0.23904431 0.19485251 0.21386203 0.15120541 0.1528519 \\ 
 \hrule \vspace{5pt}
 \noindent The Euler allocation of loss for risk position 2:\\
 \hrule \vspace{5pt}
-\noindent 0.95074015 0.83226873 1.00039266 0.8035942  0.97206386
- 0.94873385 0.83318668 1.00361845 0.80528243\\ 0.96816801
- 0.94451758 0.82933207 1.00083888 0.80319055 0.96631793
- 0.95369922 0.83591074\\ 1.00354345 0.80375346 0.96967295
- 0.94587326 0.83020062 0.99665229 0.79885018 0.96679659 \\
+\noindent 0.24858784 0.2157392  0.25642818 0.20256674 0.23892676
+0.24828428 0.21490461 0.25562263 0.20137282\\ 0.23844682
+0.24794592 0.21578367 0.25661238 0.20202529 0.23810822
+0.24925457 0.21722997\\ 0.25726635 0.20277242 0.23880643
+0.24874853 0.21607067 0.25557722 0.20258935 0.23816956 \\
 \hrule \vspace{5pt}
 \vspace{15pt}
 \noindent Step 13:\\
@@ -146,11 +187,11 @@ The Euler allocation of FRTB ES for risk position 1:
   \begin{tabular}{llllll}
   \hline
   \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
-1&0.60207471 &0.4137785  &0.52224703 &0.28075025 &0.32286198 \\
-2&0.59802901 &0.41281199 &0.51962047 &0.28074638 &0.32112408  \\
-3&0.60128607 &0.41527456 &0.52188917 &0.28093738 &0.3250423   \\
-4&0.59727205 &0.41300612 &0.52253727 &0.28121676 &0.32154     \\
-5&0.60020424 &0.41320606 &0.52209741 &0.28221384 &0.32328379 \\
+1&0.12282236 &0.08459659 &0.10517925 &0.05610977 &0.06283269 \\
+2&0.1225018  &0.08408319 &0.10512528 &0.0565504  &0.06313997\\
+3&0.12287793 &0.08435304 &0.10546856 &0.05645732 &0.06298003\\
+4&0.12251826 &0.08360531 &0.10515932 &0.05610671 &0.06304014\\
+5&0.12255516 &0.08415587 &0.10551905 &0.05622592 &0.06281875\\
  \end{tabular}%
   }
   \end{table}
@@ -164,11 +205,11 @@ The Euler allocation of FRTB ES for risk position 1:
   \begin{tabular}{llllll}
   \hline
   \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
-1&0.48467182 &0.35740889 &0.49289693 &0.29928577 &0.40575806 \\
-2&0.48289518 &0.35815507 &0.49488863 &0.30058843 &0.4034671  \\
-3&0.48066243 &0.35643702 &0.49338011 &0.29933861 &0.40353951 \\
-4&0.48541536 &0.35935172 &0.49523607 &0.29964757 &0.40403242 \\
-5&0.48167624 &0.35662674 &0.49117973 &0.29788533 &0.40353452 \\
+1&0.12744237& 0.0932317 & 0.12648114& 0.07523228& 0.09827958\\
+2&0.12727341& 0.09267116& 0.12606634& 0.07487922& 0.09825361\\
+3&0.12703409& 0.09318152& 0.12672907& 0.07509833& 0.09787168\\
+4&0.12776764& 0.0937295 & 0.12701285& 0.07532   & 0.09827505\\
+5&0.12753039& 0.09331989& 0.12610123& 0.0753331 & 0.09788242\\
   \end{tabular}%
   }
   \end{table}
@@ -181,7 +222,7 @@ For step 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
   \begin{tabular}{llllll}
   \hline
   j                         & 1          & 2          & 3         & 4          & 5          \\ \hline
-  $ES^{F,C}(X_1(6,j)|X(6))$ & 3.09294169& 2.02120299& 2.35235139& 1.11240045& 0.99199926 \\ \hline
+  $ES^{F,C}(X_1(6,j)|X(6))$ &0.63757743& 0.41627193& 0.48337935& 0.226784  & 0.19917252 \\ \hline
   \end{tabular}%
   }
   \end{table}
@@ -192,7 +233,7 @@ For step 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
   \begin{tabular}{llllll}
   \hline
   j                         & 1          & 2          & 3         & 4          & 5          \\ \hline
-  $ES^{F,C}(X_1(6,j)|X(6))$ & 1.64112628& 1.12032025& 1.38560853& 0.72754597& 0.79305284 \\ \hline
+  $ES^{F,C}(X_2(6,j)|X(6))$ &0.46242761& 0.31136153& 0.38037363& 0.19703998& 0.20690968 \\ \hline
   \end{tabular}%
   }
   \end{table}
@@ -205,12 +246,12 @@ For step 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
   \begin{tabular}{llllll}
   \hline
   \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
-  1& 0.60207471 &0.4137785 & 0.52224703 &0.28075025 &0.32286198 \\ 
-  2& 0.59802901 &0.41281199& 0.51962047 &0.28074638 &0.32112408 \\ 
-  3& 0.60128607 &0.41527456& 0.52188917 &0.28093738 &0.3250423  \\ 
-  4& 0.59727205 &0.41300612& 0.52253727 &0.28121676 &0.32154    \\ 
-  5& 0.60020424 &0.41320606& 0.52209741 &0.28221384 &0.32328379 \\ 
-  6& 3.09294169 &2.02120299& 2.35235139 &1.11240045 &0.99199926 \\ \hline
+  1&0.12282236 &0.08459659 &0.10517925 &0.05610977 &0.06283269  \\
+  2&0.1225018  &0.08408319 &0.10512528 &0.0565504  &0.06313997  \\
+  3&0.12287793 &0.08435304 &0.10546856 &0.05645732 &0.06298003  \\
+  4&0.12251826 &0.08360531 &0.10515932 &0.05610671 &0.06304014  \\
+  5&0.12255516 &0.08415587 &0.10551905 &0.05622592 &0.06281875  \\
+  6&0.63757743 &0.41627193 &0.48337935 &0.226784   &0.19917252  \\
   \end{tabular}%
   }
   \end{table}
@@ -223,16 +264,50 @@ For step 14:\\ $ES^{F,C}(X_1(6,j)|X(6))$ is:
   \begin{tabular}{llllll}
   \hline
   \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
-
-1&0.48467182 &0.35740889& 0.49289693& 0.29928577& 0.40575806\\ 
-2&0.48289518 &0.35815507& 0.49488863& 0.30058843& 0.4034671 \\ 
-3&0.48066243 &0.35643702& 0.49338011& 0.29933861& 0.40353951\\ 
-4&0.48541536 &0.35935172& 0.49523607& 0.29964757& 0.40403242\\ 
-5&0.48167624 &0.35662674& 0.49117973& 0.29788533& 0.40353452\\ 
-6&1.64112628 &1.12032025& 1.38560853& 0.72754597& 0.79305284\\ \hline
+1&0.12744237 &0.0932317  &0.12648114 &0.07523228 &0.09827958\\
+2&0.12727341 &0.09267116 &0.12606634 &0.07487922 &0.09825361\\
+3&0.12703409 &0.09318152 &0.12672907 &0.07509833 &0.09787168\\
+4&0.12776764 &0.0937295  &0.12701285 &0.07532    &0.09827505\\
+5&0.12753039 &0.09331989 &0.12610123 &0.0753331  &0.09788242\\
+6&0.46242761 &0.31136153 &0.38037363 &0.19703998 &0.20690968\\
   \end{tabular}%
   }
   \end{table}
 \subsection*{Step 16-17}
-
+\noindent $IMCC(\tilde{X_1}(i,k)|X(i))$ is:
+\begin{table}[H]
+\centering
+  \label{tab:my-table5}
+  \resizebox{.85\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
+1&0.02456447 &0.04571362 &0.08077337 &0.10882825 &0.17166094\\
+2&0.02450036 &0.04552116 &0.08056292 &0.10883812 &0.17197809\\
+3&0.02457559 &0.04566385 &0.08082004 &0.1090487  &0.17202873\\
+4&0.02450365 &0.04540498 &0.08045809 &0.10851144 &0.17155158\\
+5&0.02451103 &0.04555    &0.08072301 &0.10883597 &0.17165472\\
+6&0.12751549 &0.23158347 &0.39270992 &0.50610192 &0.70527444\\
+  \end{tabular}%
+  }
+  \end{table}
+  
+\newpage
+\noindent $IMCC(\tilde{X_2}(i,k)|X(i))$ is:
+\begin{table}[H]
+\centering
+  \label{tab:my-table6}
+  \resizebox{.85\columnwidth}{!}{%
+  \begin{tabular}{llllll}
+  \hline
+  \diagbox{i}{j}     & 1          & 2          & 3         & 4          & 5          \\ \hline
+1&0.02548847 &0.0487964  &0.09095678 &0.12857292 &0.2268525 \\
+2&0.02545468 &0.04862247 &0.09064458 &0.12808419 &0.2263378 \\
+3&0.02540682 &0.0487022  &0.09094522 &0.12849439 &0.22636607\\
+4&0.02555353 &0.0489859  &0.09132352 &0.12898352 &0.22725857\\
+5&0.02550608 &0.04883605 &0.09086979 &0.12853634 &0.22641876\\
+6&0.09248552 &0.1703259  &0.29711711 &0.3956371  &0.60254678\\
+  \end{tabular}%
+  }
+  \end{table}
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.11)  22 NOV 2022 21:47
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.11)  27 NOV 2022 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,42 +336,47 @@ LaTeX Font Warning: Font shape `TU/cmbr/b/n' undefined
 [1
 
 ]
-Overfull \hbox (14.7375pt too wide) in paragraph at lines 101--103
+Overfull \hbox (14.7375pt too wide) in paragraph at lines 124--126
 \TU/cmbr/m/n/10 For step 15, with the assumption in item 8 that $[] \OT1/cmbr/m/n/10 = 2$\TU/cmbr/m/n/10 , we have $\OML/cmbrm/m/it/10 IMCC\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 )) = \OML/cmbrm/m/it/10 ES[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 X[]\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i; j\OT1/cmbr/m/n/10 )\OMS/cmbrs/m/n/10 j\OML/cmbrm/m/it/10 X\OT1/cmbr/m/n/10 (\OML/cmbrm/m/it/10 i\OT1/cmbr/m/n/10 ))$\TU/cmbr/m/n/10 . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+Underfull \hbox (badness 10000) in paragraph at lines 147--152
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--130
+Underfull \hbox (badness 10000) in paragraph at lines 166--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--138
+Underfull \hbox (badness 10000) in paragraph at lines 174--179
 
  []
 
-[2] [3] (./team_project_report.aux)
+[3] [4] [5] (./team_project_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 2924 strings out of 476156
- 47364 string characters out of 5814962
- 373046 words of memory out of 5000000
- 23676 multiletter control sequences out of 15000+600000
+ 2926 strings out of 476156
+ 47394 string characters out of 5814962
+ 374060 words of memory out of 5000000
+ 23678 multiletter control sequences out of 15000+600000
  473651 words of font info for 47 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,18n,62p,575b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on team_project_report.xdv (3 pages, 62420 bytes).
+Output written on team_project_report.xdv (5 pages, 88116 bytes).

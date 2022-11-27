@@ -1,10 +1,10 @@
 # Fdb version 3
-["xdvipdfmx"] 1669171634 "team_project_report.xdv" "team_project_report.pdf" "team_project_report" 1669171634
-  "team_project_report.xdv" 1669171634 62420 473f4e0661385ea0175539c30db59042 "xelatex"
+["xdvipdfmx"] 1669578651 "team_project_report.xdv" "team_project_report.pdf" "team_project_report" 1669578651
+  "team_project_report.xdv" 1669578651 88116 d42cb62dea7e202c2c66a9ba154eb1d3 "xelatex"
   (generated)
   "team_project_report.pdf"
-["xelatex"] 1669171634 "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" "team_project_report.xdv" "team_project_report" 1669171634
-  "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" 1669171634 10527 b455420633c19b38031def36288624e2 ""
+["xelatex"] 1669578650 "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" "team_project_report.xdv" "team_project_report" 1669578651
+  "/home/spectre/Desktop/SEMESTER_3_HOMEWORK/MF731/FRTB_project/report/team_project_report.tex" 1669578650 14056 1384b6a8ba5139fed312c632427e65fd ""
   "/usr/local/share/texmf/fonts/tfm/public/cmbright/cmbr10.tfm" 1668967403 1304 95ad082f6791446dc43df559d5c79878 ""
   "/usr/local/share/texmf/fonts/tfm/public/cmbright/cmbr8.tfm" 1668967403 1304 6f575d26e34fea6311d7ae3e9a5bf8d0 ""
   "/usr/local/share/texmf/fonts/tfm/public/cmbright/cmbrmi10.tfm" 1668967403 1544 20b33e3c0f9b0012adb04ac9d418afaa ""
@@ -46,8 +46,8 @@
   "/usr/share/texmf-dist/tex/latex/tools/calc.sty" 1650183167 10214 00ce62e730d0cfe22b35e8f1c84949c7 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1668183105 5825174 62df1a0264fd614b42cdbb4db0d00ac3 ""
-  "team_project_report.aux" 1669171634 219 82e6d09cf5c09b84aa8775e44492c7aa "xelatex"
-  "team_project_report.tex" 1669171634 10527 b455420633c19b38031def36288624e2 ""
+  "team_project_report.aux" 1669578651 283 8b5aae8706248fb31c5444373b6d0e74 "xelatex"
+  "team_project_report.tex" 1669578650 14056 1384b6a8ba5139fed312c632427e65fd ""
   (generated)
   "team_project_report.aux"
   "team_project_report.log"
